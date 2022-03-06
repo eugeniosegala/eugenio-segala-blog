@@ -49,15 +49,15 @@ const Bio = () => {
           {author?.summary || null}
           {` `}
           Mi trovi anche su:{` `}
-          <a href={social?.github} target="_blank">
+          <a href={social?.github} target="_blank" rel="noreferrer">
             GitHub
           </a>
           ,{` `}
-          <a href={social?.linkedin} target="_blank">
+          <a href={social?.linkedin} target="_blank" rel="noreferrer">
             LinkedIn
           </a>
           {` `} e {` `}
-          <a href={social?.instagram} target="_blank">
+          <a href={social?.instagram} target="_blank" rel="noreferrer">
             Instagram
           </a>
           .
