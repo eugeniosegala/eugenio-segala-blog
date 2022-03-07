@@ -308,6 +308,7 @@ a:focus {
   margin-right: var(--spacing-4);
   min-width: 85px;
   border-radius: 100%;
+  overflow: hidden;
 }
 
 .blog-post header h1 {
