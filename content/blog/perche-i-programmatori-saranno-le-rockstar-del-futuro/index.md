@@ -65,8 +65,7 @@ esponenziale, ad esempio troviamo professioni (prima inesistenti) come:
 
 _Cloud Architect, IT Director, Senior System Designer, Front End Developer, Data Center Support Specialist, Senior
 Network Architect **e tantissimi altri!** per la lista completa ti consiglio di
-leggere [List of Information Technology (IT) Job Titles](https://www.thebalancecareers.com/list-of-information-technology-it-job-titles-2061498)
-._
+leggere [List of Information Technology (IT) Job Titles](https://www.thebalancecareers.com/list-of-information-technology-it-job-titles-2061498)._
 
 **Viviamo in tempi mistici,** ogni giorno, quando leggo le testate giornalistiche in ambito IT, qualcuno da qualche
 parte nel mondo ha inventato qualcosa di nuovo. Questo settore cresce più velocemente delle società stesse che lo
@@ -93,4 +92,4 @@ prestigio.** L’informatica sarà la padrona del mondo intero.
 
 Tutto verrà digitalizzato è solo questione di tempo. **E’ molto importante però rimanere connessi alla realtà**, bisogna
 saper preservare se stessi in questa grande epoca informatica. Ecco perché ti consiglio di leggere il mio
-articolo: [Kit di sopravvivenza per sviluppatori Web](/kit-di-sopravvivenza-per-sviluppatori-web/)
+articolo: [Kit di sopravvivenza per sviluppatori Web](/kit-di-sopravvivenza-per-sviluppatori-web/).

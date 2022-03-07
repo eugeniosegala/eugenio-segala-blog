@@ -122,7 +122,7 @@ esempio quanto tempo impiega il DOM a processarsi.
 Ottieni informazioni dettagliate sulle prestazioni di sito Web, questa estensione è una sorta di mini versione live di
 WebPageTest.
 
-Performance-Analyzer aiuta ad analizzare la pagina corrente attraverso le API di Resource, Navigation e User Timing .
+Performance-Analyzer aiuta ad analizzare la pagina corrente attraverso le API di Resource, Navigation e User Timing.
 Puoi vedere le richieste per tipo, dominio, tempi di caricamento e altro.
 
 ## [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)

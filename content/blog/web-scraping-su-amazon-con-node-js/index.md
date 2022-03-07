@@ -172,7 +172,7 @@ Questo è solo una delle tantissime operazioni possibili grazie a **Node JS** e 
 Incredibile non è vero? Abbiamo di fatto creato qualcosa che assomiglia ad un piccolo crawler. Molte società utilizzano
 queste tecniche per paragonare prodotti, viaggi e tanto altro.
 
-Di seguito il c_odice sorgente completo_ eseguibile tramite il comando `node app.js` dalla root principale:
+Di seguito il codice sorgente completo eseguibile tramite il comando `node app.js` dalla root principale:
 
 ```jsx
 // load puppeteer

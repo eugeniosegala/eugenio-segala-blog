@@ -44,8 +44,8 @@ aumentando così sempre di più il **page load**.
 
 Quello che possiamo fare per recuperare terreno è utilizzare i `Dynamic import`.
 
-L’idea di base è suddividere i componenti che non vogliamo che vengano caricati nel bundle principale in vari **
-chunks** (pezzi). Sarà quindi necessario sviluppare un componente **HOC** (Higher-Order Components) per effettuare le
+L’idea di base è suddividere i componenti che non vogliamo che vengano caricati nel bundle principale in vari **chunks** (pezzi). 
+Sarà quindi necessario sviluppare un componente **HOC** (Higher-Order Components) per effettuare le
 chiamate ai vari componenti esterni al pacchetto:
 
 ```jsx
