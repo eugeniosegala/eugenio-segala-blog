@@ -45,22 +45,25 @@ const Bio = () => {
         alt="Eugenio Segala"
       />
       {author?.name && (
-        <p>
+        <p className="bio-content">
           {author?.summary || null}
           {` `}
-          Mi trovi anche su:{` `}
-          <a href={social?.github} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-          ,{` `}
-          <a href={social?.linkedin} target="_blank" rel="noreferrer">
-            LinkedIn
-          </a>
-          {` `} e {` `}
-          <a href={social?.instagram} target="_blank" rel="noreferrer">
-            Instagram
-          </a>
-          .
+          <br />
+          <span>
+            Follow me on:{` `}
+            <a href={social?.github} target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+            ,{` `}
+            <a href={social?.linkedin} target="_blank" rel="noreferrer">
+              LinkedIn
+            </a>
+            {` `} e {` `}
+            <a href={social?.instagram} target="_blank" rel="noreferrer">
+              Instagram
+            </a>
+            .
+          </span>
         </p>
       )}
     </div>

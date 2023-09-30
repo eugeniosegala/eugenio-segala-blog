@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Eugenio Segala - Aka Yüg | JS Full-stack Developer, UI Specialist, React Addicted - London`,
+    title: `Eugenio Segala - Engineering lead, technologist, and dreamer.`,
     author: {
       name: `Eugenio Segala`,
-      summary: `Ciao 👋. Sono Eugenio (aka Yüg). Lavoro da anni con startup e multinazionali nel settore IT come JavaScript Full-Stack Engineer. Amo profondamente il web e investo molto tempo studiando e ricercando nuove tecnologie che possano migliorare il mio lavoro e quello degli altri.`,
+      summary: `Engineering lead, technologist, and dreamer.`,
     },
-    description: `Mi chiamo Eugenio Segala, Yüg nella rete. Lavoro da anni con startup e multinazionali nel settore IT come JavaScript Full-Stack Engineer. Amo profondamente il web e investo molto tempo studiando e ricercando nuove tecnologie che possano migliorare il mio lavoro e quello degli altri.`,
+    description: `Engineering lead, technologist, and dreamer.`,
     siteUrl: `https://eugeniosegala.it/`,
     social: {
       github: `https://github.com/eugeniosegala`,
