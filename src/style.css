@@ -301,6 +301,12 @@ a:focus {
     font-size: 14px;
 }
 
+.bio-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .bio p {
     margin-bottom: var(--spacing-0);
 }
@@ -381,10 +387,4 @@ b, strong {
     ol {
         list-style-position: inside;
     }
-}
-
-.bio-content {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
 }
