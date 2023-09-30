@@ -58,7 +58,7 @@ const Bio = () => {
             <a href={social?.linkedin} target="_blank" rel="noreferrer">
               LinkedIn
             </a>
-            {` `} e {` `}
+            {` `} and {` `}
             <a href={social?.instagram} target="_blank" rel="noreferrer">
               Instagram
             </a>
