@@ -50,7 +50,7 @@ const Bio = () => {
           {` `}
           <br />
           <span>
-            Follow me on:{` `}
+            Follow me on{` `}
             <a href={social?.github} target="_blank" rel="noreferrer">
               GitHub
             </a>
