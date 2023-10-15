@@ -47,14 +47,14 @@ const BlogPostTemplate = ({ data, location }) => {
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
-                {"<"} Precedente
+                {"<"} Previous
               </Link>
             )}
           </li>
           <li>
             {next && (
               <Link to={next.fields.slug} rel="next">
-                Successivo {">"}
+                Next {">"}
               </Link>
             )}
           </li>
