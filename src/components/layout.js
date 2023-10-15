@@ -25,8 +25,8 @@ const Layout = ({ location, title, children }) => {
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer className="quote">
-        Un giorno le macchine riusciranno a risolvere tutti i problemi, ma mai
-        nessuna di esse potrà porne uno - Albert Einstein
+        If debugging is the process of removing software bugs, then programming
+        must be the process of putting them in. - Edsger Dijkstra
       </footer>
     </div>
   )

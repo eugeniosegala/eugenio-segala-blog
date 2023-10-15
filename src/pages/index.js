@@ -14,7 +14,7 @@ const BlogIndex = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
         <Seo />
         <Bio />
-        <p>Nessun post trovato.</p>
+        <p>No posts were found.</p>
       </Layout>
     )
   }

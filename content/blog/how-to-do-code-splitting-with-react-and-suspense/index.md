@@ -6,7 +6,7 @@ description: Recently, the React team added the ability to dynamically import co
 
 If you're reading this blog, you've probably noticed my particular attention for performance.
 In fact, some time ago I published the
-article: [How to Implement Code Splitting with React and WebPack](/how-to-implement-code-splitting-with-react-and-webpack/).
+article: [How to implement Code Splitting with React and WebPack](/how-to-implement-code-splitting-with-react-and-webpack/).
 
 **I was talking about the ability to "split" your application into small "chunks" to make it more performant.**
 
