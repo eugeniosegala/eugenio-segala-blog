@@ -1,5 +1,5 @@
 ---
-title: Come fare Code Splitting con React e WebPack 
+title: Come fare Code Splitting con React e WebPack
 date: "2018-10-03T22:00:00.000Z"
 description: Il miglior modo per creare una applicazione rapida ed efficiente è pensare che il client è vostro nemico, giocherà sempre contro di voi a causa delle “limitate” risorse che offre.
 ---
@@ -44,36 +44,34 @@ aumentando così sempre di più il **page load**.
 
 Quello che possiamo fare per recuperare terreno è utilizzare i `Dynamic import`.
 
-L’idea di base è suddividere i componenti che non vogliamo che vengano caricati nel bundle principale in vari **chunks** (pezzi). 
+L’idea di base è suddividere i componenti che non vogliamo che vengano caricati nel bundle principale in vari **chunks** (pezzi).
 Sarà quindi necessario sviluppare un componente **HOC** (Higher-Order Components) per effettuare le
 chiamate ai vari componenti esterni al pacchetto:
 
 ```jsx
 // Async Component from Maximilian Schwarzmüller
-import React, { Component } from 'react';
+import React, { Component } from "react"
 
-const asyncComponent = (importComponent) => {
-
+const asyncComponent = importComponent => {
   return class extends Component {
     state = {
       component: null,
-    };
+    }
 
     componentDidMount() {
-      importComponent()
-        .then(cmp => {
-          this.setState({ component: cmp.default });
-        });
+      importComponent().then(cmp => {
+        this.setState({ component: cmp.default })
+      })
     }
 
     render() {
-      const Chunk = this.state.component;
-      return Chunk ? <Chunk {...this.props} /> : null;
+      const Chunk = this.state.component
+      return Chunk ? <Chunk {...this.props} /> : null
     }
-  };
-};
+  }
+}
 
-export default asyncComponent;
+export default asyncComponent
 ```
 
 Questo componente HOC andrà in realtà a chiamare il componente reale attraverso una `.then()`.
@@ -147,7 +145,7 @@ Grazie a questa tecnica ottimizzeremo la nostra applicazione diminuendo la dimen
 solamente quello che sta realmente visualizzando.
 
 **Nella versione di React 16.6, è possibile “splittare” la tua applicazione grazie ad una nuova e semplice funzionalità!
-Ti consiglio di leggere il mio articolo in merito: [Come fare Code Splitting con React e Suspense](/come-fare-code-splitting-con-react-e-suspense/)**
+Ti consiglio di leggere il mio articolo in merito: [How to implement Code Splitting with React and Suspense](/how-to-do-code-splitting-with-react-and-suspense/)**
 
 **E’ importante sapere che:** suddividere tutta l’applicazione in chunk è controproducente in quando obbligheremo
 l’utente a effettuare chiamate ad altri file senza motivo. L’applicativo sarà più piccolo in termini di dimensione, ma
