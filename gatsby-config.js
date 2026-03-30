@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Eugenio Segala - Engineering lead, technologist, and dreamer.`,
+    title: `Eugenio Segala - Applied AI Lead, technologist, and dreamer.`,
     author: {
       name: `Eugenio Segala`,
-      summary: `Engineering lead, technologist, and dreamer.`,
+      summary: `Applied AI Lead, technologist, and dreamer.`,
     },
-    description: `Engineering lead, technologist, and dreamer.`,
+    description: `Applied AI Lead, technologist, and dreamer.`,
     siteUrl: `https://eugeniosegala.it/`,
     social: {
       github: `https://github.com/eugeniosegala`,
