@@ -7,7 +7,6 @@
 
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 const Seo = ({ description, lang, meta, title }) => {
@@ -18,9 +17,6 @@ const Seo = ({ description, lang, meta, title }) => {
           siteMetadata {
             title
             description
-            social {
-              twitter
-            }
           }
         }
       }
@@ -29,22 +25,20 @@ const Seo = ({ description, lang, meta, title }) => {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const resolvedTitle = title ? `${title} | ${defaultTitle}` : defaultTitle
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title || defaultTitle}
-      titleTemplate={title ? `%s | ${defaultTitle}` : defaultTitle}
-      meta={[
+    <>
+      <html lang={lang} />
+      <title>{resolvedTitle}</title>
+      {[
         {
           name: `description`,
           content: metaDescription,
         },
         {
           property: `og:title`,
-          content: title,
+          content: title || defaultTitle,
         },
         {
           property: `og:description`,
@@ -54,8 +48,15 @@ const Seo = ({ description, lang, meta, title }) => {
           property: `og:type`,
           content: `website`,
         },
-      ].concat(meta)}
-    />
+      ]
+        .concat(meta)
+        .map((tag, index) => (
+          <meta
+            key={`${tag.name || tag.property || `meta`}-${index}`}
+            {...tag}
+          />
+        ))}
+    </>
   )
 }
 

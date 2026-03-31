@@ -12,7 +12,6 @@ const BlogIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <Seo />
         <Bio />
         <p>No posts found.</p>
       </Layout>
@@ -21,7 +20,6 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo />
       <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
@@ -61,6 +59,8 @@ const BlogIndex = ({ data, location }) => {
 
 export default BlogIndex
 
+export const Head = () => <Seo />
+
 export const pageQuery = graphql`
   query {
     site {
@@ -71,7 +71,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       nodes {
         excerpt
         fields {

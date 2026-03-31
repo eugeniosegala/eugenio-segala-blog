@@ -9,7 +9,6 @@ const NotFoundPage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="404: Not Found" />
       <h1>404: Not Found 🤖</h1>
       <p>You just reached a page that does not exist...</p>
     </Layout>
@@ -17,6 +16,8 @@ const NotFoundPage = ({ data, location }) => {
 }
 
 export default NotFoundPage
+
+export const Head = () => <Seo title="404: Not Found" />
 
 export const pageQuery = graphql`
   query {
