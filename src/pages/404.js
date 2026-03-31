@@ -11,7 +11,7 @@ const NotFoundPage = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="404: Not Found" />
       <h1>404: Not Found 🤖</h1>
-      <p>Hai appena raggiunto una pagina che non esiste...</p>
+      <p>You just reached a page that does not exist...</p>
     </Layout>
   )
 }
