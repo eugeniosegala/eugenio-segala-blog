@@ -174,7 +174,7 @@ p {
     line-height: var(--lineHeight-relaxed);
     --baseline-multiplier: 0.179;
     --x-height-multiplier: 0.35;
-    margin: var(--spacing-0) var(--spacing-0) var(--spacing-6) var(--spacing-0);
+    margin: var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0);
     padding: var(--spacing-0);
 }
 
@@ -205,16 +205,6 @@ li *:last-child {
 li > ul {
     margin-left: var(--spacing-8);
     margin-top: calc(var(--spacing-8) / 2);
-}
-
-.blog-post section ul,
-.blog-post section ol {
-    padding-left: var(--spacing-6);
-}
-
-.blog-post section li > ul,
-.blog-post section li > ol {
-    margin-left: var(--spacing-5);
 }
 
 blockquote {
@@ -372,7 +362,7 @@ a:focus {
 }
 
 .gatsby-highlight {
-    margin-bottom: var(--spacing-6);
+    margin-bottom: var(--spacing-8);
 }
 
 /* Overrides */
@@ -410,13 +400,8 @@ b, strong {
         margin-left: var(--spacing-0);
     }
 
-    .blog-post section ul,
-    .blog-post section ol {
-        padding-left: var(--spacing-5);
-    }
-
-    .blog-post section ul,
-    .blog-post section ol {
+    ul,
+    ol {
         list-style-position: inside;
     }
 }
