@@ -1,6 +1,5 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -10,8 +9,6 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.author.name
   const { previous, next } = data
-  const thumbnail = getImage(post.frontmatter.thumbnail) || getImage(data.defaultThumbnail)
-  const hasCustomThumbnail = Boolean(post.frontmatter.thumbnail)
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -24,13 +21,6 @@ const BlogPostTemplate = ({ data, location }) => {
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
         </header>
-        {thumbnail && (
-          <GatsbyImage
-            className="blog-post-thumbnail"
-            image={thumbnail}
-            alt={hasCustomThumbnail ? post.frontmatter.title : ""}
-          />
-        )}
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
@@ -110,12 +100,6 @@ export const pageQuery = graphql`
         description
         thumbnail {
           childImageSharp {
-            gatsbyImageData(
-              width: 960
-              height: 540
-              placeholder: BLURRED
-              transformOptions: { fit: COVER }
-            )
             resize(width: 1200, height: 630, fit: COVER, quality: 90) {
               src
               width
@@ -139,16 +123,6 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-      }
-    }
-    defaultThumbnail: file(relativePath: { eq: "default-post-thumbnail.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 960
-          height: 540
-          placeholder: BLURRED
-          transformOptions: { fit: COVER }
-        )
       }
     }
   }
