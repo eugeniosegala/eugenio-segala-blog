@@ -25,8 +25,8 @@ const Layout = ({ location, title, children }) => {
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer className="quote">
-        Un giorno le macchine riusciranno a risolvere tutti i problemi, ma mai
-        nessuna di esse potrà porne uno - Albert Einstein
+        One day machines will be able to solve all problems, but none of them
+        will ever be able to pose one. - Albert Einstein
       </footer>
     </div>
   )
