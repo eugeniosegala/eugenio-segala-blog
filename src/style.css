@@ -188,6 +188,10 @@ ol {
     list-style-image: none;
 }
 
+.blog-post ol {
+    padding: var(--spacing-3);
+}
+
 ul li,
 ol li {
     padding-left: var(--spacing-0);
@@ -398,6 +402,10 @@ b, strong {
     blockquote {
         padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
         margin-left: var(--spacing-0);
+    }
+
+    .blog-post ol {
+        padding: var(--spacing-0);
     }
 
     ul,
