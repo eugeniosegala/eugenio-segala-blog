@@ -188,8 +188,9 @@ ol {
     list-style-image: none;
 }
 
-.blog-post ol {
-    padding: var(--spacing-3);
+.blog-post ol, .blog-post ul {
+    padding: var(--spacing-1) var(--spacing-0) var(--spacing-3) var(--spacing-5);
+    margin-bottom: var(--spacing-2);
 }
 
 ul li,
@@ -314,6 +315,7 @@ a:focus {
     padding-bottom: var(--spacing-8);
     border-bottom: 1px solid var(--color-accent);
     font-size: 14px;
+    font-style: normal !important;
 }
 
 .bio-content {
