@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
+import Comments from "../components/comments"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -29,6 +30,7 @@ const BlogPostTemplate = ({ data, location }) => {
         <footer>
           <Bio />
         </footer>
+        <Comments pathname={post.fields.slug} />
       </article>
       <nav className="blog-post-nav">
         <ul
@@ -93,6 +95,9 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)
+      fields {
+        slug
+      }
       html
       frontmatter {
         title

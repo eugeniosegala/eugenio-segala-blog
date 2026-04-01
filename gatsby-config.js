@@ -13,6 +13,18 @@ module.exports = {
       linkedin: `https://www.linkedin.com/in/eugeniosegala/`,
       instagram: `https://www.instagram.com/eugeniosegala/`,
     },
+    comments: {
+      repo: `eugeniosegala/eugenio-segala-blog`,
+      repoId: `R_kgDOG9QWcA`,
+      category: `Announcements`,
+      categoryId: `DIC_kwDOG9QWcM4C5wyb`,
+      mapping: `pathname`,
+      strict: `1`,
+      reactionsEnabled: `1`,
+      inputPosition: `bottom`,
+      theme: `dark_dimmed`,
+      lang: `en`,
+    },
   },
   plugins: [
     `gatsby-plugin-image`,

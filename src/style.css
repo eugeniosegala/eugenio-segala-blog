@@ -188,11 +188,6 @@ ol {
     list-style-image: none;
 }
 
-.blog-post ol, .blog-post ul {
-    padding: var(--spacing-1) var(--spacing-0) var(--spacing-3) var(--spacing-5);
-    margin-bottom: var(--spacing-2);
-}
-
 ul li,
 ol li {
     padding-left: var(--spacing-0);
@@ -351,6 +346,15 @@ a:focus {
 
 .blog-post img {
     max-width: 100%;
+}
+
+.blog-post-comments h2 {
+    margin-top: var(--spacing-0);
+    margin-bottom: var(--spacing-4);
+}
+
+.blog-post-comments .giscus {
+    min-height: 240px;
 }
 
 .blog-post-thumbnail {
