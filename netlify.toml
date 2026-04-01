@@ -1,0 +1,47 @@
+[[redirects]]
+  from = "http://eugeniosegala.com/*"
+  to = "https://eugeniosegala.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://eugeniosegala.com/*"
+  to = "https://eugeniosegala.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.eugeniosegala.com/*"
+  to = "https://eugeniosegala.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.eugeniosegala.com/*"
+  to = "https://eugeniosegala.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://eugeniosegala.it/*"
+  to = "https://eugeniosegala.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://eugeniosegala.it/*"
+  to = "https://eugeniosegala.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.eugeniosegala.it/*"
+  to = "https://eugeniosegala.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.eugeniosegala.it/*"
+  to = "https://eugeniosegala.dev/:splat"
+  status = 301
+  force = true
