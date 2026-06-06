@@ -1,5 +1,5 @@
 ---
-title: "Stop Prompting, Start Logging"
+title: "Event-Driven Development for AI Agents"
 date: "2026-06-06T12:30:00.000Z"
 description: I've stopped prompting Claude Code to fix bugs one by one. Instead, I generate deterministic, maths-driven events and let the Agent read them to debug my browser-based 3D game engine on its own. This is event-driven development.
 ---
