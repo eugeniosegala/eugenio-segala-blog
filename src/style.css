@@ -349,6 +349,14 @@ a:focus {
   max-width: 100%;
 }
 
+/* Image captions: a paragraph that is entirely italic, e.g. _Example..._ */
+.blog-post p > em:only-child {
+  display: block;
+  margin-top: calc(var(--spacing-4) * -1);
+  color: #4d5666;
+  font-size: 0.75rem;
+}
+
 .blog-post-comments h2 {
   margin-top: var(--spacing-0);
   margin-bottom: var(--spacing-4);
