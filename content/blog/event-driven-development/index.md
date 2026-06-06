@@ -4,15 +4,13 @@ date: "2026-06-06T12:30:00.000Z"
 description: I've stopped prompting Claude Code to fix bugs one by one. Instead, I generate deterministic, maths-driven events and let the Agent read them to debug my browser-based 3D game engine on its own. This is event-driven development.
 ---
 
-I'm moving further and further away from prompting Claude Code/Codex to solve problems. Instead, I base most of my interaction with Agents using deterministic events.
+I'm moving further and further away from prompting Claude Code/Codex to solve problems. Instead, I base most of my interaction with agents on deterministic events.
 
 I don't write a lot of prompts. I write generators of events.
 
-I let models interact with a series of raw metrics (events) that describe the behaviour of my application for me, so I don't have to.
+I let models interact with a series of raw metrics (events) that describe how my application behaves, so I don't have to. And I've discovered they often perform better reading long, verbose sequences of events to work out what's wrong and what to do next — counter-intuitive as that sounds — than being constantly prompted with "fix X, fix Y" and so on...
 
-I've discovered that models often perform better when looking at long, verbose sequences of events to work out what's wrong and what to do next (which is counter-intuitive for most), instead of me constantly prompting them with "fix X, fix Y" and so on...
-
-Deterministic events driven by maths are better than I am at prompting the Agents, and anyway, constantly prompting agents is arguably a very boring job.
+Deterministic events driven by maths are better than I am at prompting the agents, and anyway, constantly prompting agents is arguably a very boring job.
 
 ## Meet Cypher
 
@@ -55,27 +53,27 @@ However, when I started developing my new custom 3D engine (Cypher), I ran into 
 
 _Example of a problem called "Clipping", where you can literally clip into walls/stairs._
 
-## How most people debug with an Agent
+## How most people debug with an agent
 
 How would you typically solve this problem while working with **Claude Code**?
 
-I'm guessing you'd try to ask the Agent:
+I'm guessing you'd try to ask the agent:
 
 > Every time I descend the stairs diagonally in my video game, I often clip with the edges of the stairs. Help me debug the problem, the main logic is in `@physics.mjs` etc...
 
-That's pretty much how people tend to vibe code applications in general (or simply ask Agents to help them). You see that across more traditional web applications too, and not only games, like APIs and websites. You write some code, something goes wrong, you ask the AI to fix it or help you, and you continue down this loop until you're satisfied with the fix.
+That's pretty much how people tend to vibe code applications in general (or simply ask agents to help them). You see that across more traditional web applications too, and not only games, like APIs and websites. You write some code, something goes wrong, you ask the AI to fix it or help you, and you continue down this loop until you're satisfied with the fix.
 
 ## Why words don't work
 
 This doesn't work well, because your own words are actually a lossy version of the problem you think you're experiencing. Problems are often more complicated than they seem.
 
-This is why I often felt Agents weren't helping me much and were only introducing new bugs in some cases.
+This is why I often felt agents weren't helping me much and were only introducing new bugs in some cases.
 
 I don't think using words to explain maths is a good idea. And the thing is, most problems in software are mathematical problems.
 
 Even writing CSS has more to do with maths than you realise.
 
-So... using words is bad.
+So... words are a low-resolution tool for a high-resolution problem.
 
 ## Building an event recording system
 
@@ -126,11 +124,11 @@ When you start your next project (or even an existing one), try building this ev
 
 So now what? I ended up with a pile of raw physics metrics, seemingly useless and unreadable to humans. But surprisingly to me, the model is incredibly good at making sense of it!
 
-To improve my game, I'd simply play, then ask the model to check the raw metrics (you can even build a hook and remove your prompt altogether and allow the Agent to use loops, I'm sure you heard of this before).
+To improve my game, I'd simply play, then ask the model to check the raw metrics (you can even build a hook and remove your prompt altogether and allow the agent to use loops, I'm sure you heard of this before).
 
 From there (and for my use-case), Claude Code would automatically spot physics anomalies in the code, flag them, and fix them.
 
-You might be wondering how that's possible. How can the Agent identify these issues without me specifying the problem? Well, the thing is, there are many things in physics that are known to be true. For instance, sudden movements on the XYZ axis that make an impossible movement. There are a lot of anomalies in physics that the model already has its own internal understanding of.
+You might be wondering how that's possible. How can the agent identify these issues without me specifying the problem? Well, the thing is, there are many things in physics that are known to be true — for instance, a sudden jump along the XYZ axes that describes an impossible movement. There are a lot of anomalies in physics that the model already has its own internal understanding of.
 
 ## It works beyond games
 
@@ -138,11 +136,11 @@ And to be fair, the same goes for other systems, like backend systems where you 
 
 I appreciate that the definition of "success" changes based on what you are working on, but I want you to think creatively.
 
-For instance, you could have a file like an `Agent.md` or a `Claude.md` describing roughly your performance goals, or what your app should do. The data collector I described then lets the Agent see whether there are discrepancies that need addressing. The same goes for logs generating errors, and so on...
+For instance, you could have a file like an `Agent.md` or a `Claude.md` describing roughly your performance goals, or what your app should do. The data collector I described then lets the agent see whether there are discrepancies that need addressing. The same goes for logs generating errors, and so on...
 
-So as soon as you have very good diagnostics, ones that are arguably excessively verbose, you'll find they help the Agent a lot in helping you achieve what you are trying to achieve.
+So as soon as you have very good diagnostics, ones that are arguably excessively verbose, you'll find they help the agent enormously in getting you where you want to go.
 
-To be honest, I took this concept to the extreme by also using special Hooks to then verify the performance dynamically at every Agent turn, creating iterative loops that would verify the outputs using, in essence, static analysis.
+To be honest, I took this concept to the extreme by also using special hooks to then verify the performance dynamically at every agent turn, creating iterative loops that would verify the outputs using, in essence, static analysis.
 
 ## Final thoughts
 
