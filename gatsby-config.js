@@ -7,7 +7,7 @@ module.exports = {
       summary: `Applied AI lead, technologist, and dreamer.`,
     },
     description: `Applied AI lead, technologist, and dreamer.`,
-    siteUrl: `https://eugeniosegala.it/`,
+    siteUrl: `https://eugeniosegala.dev/`,
     social: {
       github: `https://github.com/eugeniosegala`,
       linkedin: `https://www.linkedin.com/in/eugeniosegala/`,
@@ -51,6 +51,7 @@ module.exports = {
             options: {
               maxWidth: 630,
               linkImagesToOriginal: false,
+              backgroundColor: `transparent`,
             },
           },
           {
