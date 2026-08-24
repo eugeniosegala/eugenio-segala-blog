@@ -353,6 +353,7 @@ a:focus {
 .blog-post p > em:only-child {
   display: block;
   margin-top: calc(var(--spacing-4) * -1);
+  text-align: center;
   color: #4d5666;
   font-size: 0.75rem;
 }
