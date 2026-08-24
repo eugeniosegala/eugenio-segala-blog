@@ -101,6 +101,8 @@ The scheduler separates the amount of work from where it is placed. It calculate
 
 The model helped with the reasoning, but it did not get to declare success. Every useful idea became an invariant, a replayable sequence and, where it mattered, a real hardware experiment. The hot path also had to stay cheap: no normal per-frame heap allocations for generated-frame plans, fewer redundant copies and uploads, and native presentation still available when generated work fails.
 
+Those verified breakthroughs are what brought wider attention to MAKO, eventually appearing in more than fifty videos and articles. Sol helped find viable answers to the hardest timing and recovery problems; only after those answers survived the trace and hardware loop did they become something worth talking about. The coverage followed a working result, not a promise about AI.
+
 OpenAI recently published [ten advances in mathematics and theoretical computer science](https://openai.com/index/ten-advances-in-mathematics/) produced with an internal model. A frame scheduler is not a long-standing conjecture, but the relevance is real. Good frame pacing is a difficult mathematical problem: a moving sequence of constraints that has to remain stable while the game, the display and the available GPU time keep changing. Models are becoming good enough to explore that space and surface timing policies a person might not have considered. But a policy that looks perfect on paper can still create ghosting, latency or a missed real frame. MAKO gives every proposal a hard test: replay it, run it under GPU pressure and compare the result on real hardware. That is where model reasoning becomes engineering.
 
 ## Beyond frame generation
