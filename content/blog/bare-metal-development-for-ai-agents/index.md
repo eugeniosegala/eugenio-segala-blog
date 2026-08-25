@@ -17,7 +17,7 @@ What intrigued me was the gap between what I could see on Windows and what I cou
 
 The result is [MAKO](https://github.com/eugeniosegala/MAKO), an open-source frame-generation system for SteamOS and Linux. MAKO Renderer does the graphics work and decides how to schedule it, while MAKO Decky makes it practical to install and control from Gaming Mode. Its main contribution is the introduction of Adaptive Frame Generation. A fixed configuration makes a blunt choice, such as 2x or 3x frame generation. Adaptive can work in between those settings: it aims for a chosen target and generates only the amount of extra work that is useful at that moment. That can avoid spending GPU time on frames the display does not need, reduce the risk of unnecessary input latency and find a better trade-off between smoothness and responsiveness for the game in front of it. It is the foundation for the performance, recovery and compatibility work that follows, and the moment the project began moving in the direction I had foreseen.
 
-This is how that idea grew from an experimental plugin into a much larger system, and why developing it eventually required a Mac, a modified Steam machine, frontier AI agents and a private laboratory of real-game traces.
+This is how that idea grew from an experimental plugin into a much larger system, and why developing it eventually required a Mac, a modified Steam Machine, frontier AI agents and a private laboratory of real-game traces.
 
 ## How MAKO began
 
@@ -43,7 +43,7 @@ Docker is valuable for repeatable builds and automated checks, but it shares the
 
 That distinction matters because frame generation operates at the awkward boundary between the game, Vulkan, the compositor and the display. A problem can be completely invisible in a unit test, then appear only when real frames arrive with an unexpected cadence, Gamescope changes the presentation path or a Flatpak launch environment alters what the game can see. The questions I needed to answer were not only whether the code ran, but whether it recovered cleanly, preserved responsiveness and behaved correctly on the machine it was built for.
 
-I therefore turned a Steam machine into a dedicated bare-metal development worker. My Mac is the control station; the Steam machine is where the hardware truth lives. It builds MAKO, runs the game and gives the agents something real to investigate instead of a simulation of the problem.
+I therefore turned a Steam Machine into a dedicated bare-metal development worker. My Mac is the control station; the Steam Machine is where the hardware truth lives. It builds MAKO, runs the game and gives the agents something real to investigate instead of a simulation of the problem.
 
 ![The cooling assembly inside the dedicated SteamOS and AMD test machine](./steamos-test-machine-open.jpg)
 
